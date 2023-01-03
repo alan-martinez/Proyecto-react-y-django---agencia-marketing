@@ -1,4 +1,6 @@
 import { connect } from "react-redux";
+import logo_boomslag from "assets/img/boomslag-black.png"
+
 
 const navigation = {
     solutions: [
@@ -8,17 +10,14 @@ const navigation = {
       { name: 'Insights', href: '#' },
     ],
     support: [
-      { name: 'Pricing', href: '#' },
-      { name: 'Documentation', href: '#' },
-      { name: 'Guides', href: '#' },
-      { name: 'API Status', href: '#' },
+        { name: 'Contacto', href: '/contacto' },
     ],
     company: [
-      { name: 'About', href: '#' },
-      { name: 'Blog', href: '#' },
-      { name: 'Jobs', href: '#' },
-      { name: 'Press', href: '#' },
-      { name: 'Partners', href: '#' },
+      { name: 'Casos', href: '/cases' },
+      { name: 'Servicios', href: '/servicios' },
+      { name: 'About', href: '/nosotros' },
+      { name: 'Carreras', href: '/carreras' },
+      { name: 'Blog', href: '/blog' },
     ],
     legal: [
       { name: 'Claim', href: '#' },
@@ -28,7 +27,7 @@ const navigation = {
     social: [
       {
         name: 'Facebook',
-        href: '#',
+        href: 'https://www.facebook.com/AlanMartinez0203',
         icon: (props) => (
           <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
             <path
@@ -41,7 +40,7 @@ const navigation = {
       },
       {
         name: 'Instagram',
-        href: '#',
+        href: 'https://www.instagram.com/alan_martinezsepulveda/',
         icon: (props) => (
           <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
             <path
@@ -54,7 +53,7 @@ const navigation = {
       },
       {
         name: 'Twitter',
-        href: '#',
+        href: 'https://twitter.com/alanjahirMtz',
         icon: (props) => (
           <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
             <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
@@ -63,7 +62,7 @@ const navigation = {
       },
       {
         name: 'GitHub',
-        href: '#',
+        href: 'https://github.com/alan-martinez',
         icon: (props) => (
           <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
             <path
@@ -92,21 +91,18 @@ const navigation = {
 
 function Footer(){
     return (
-        <footer className="bg-white" aria-labelledby="footer-heading">
+        <footer className="bg-gray-50" aria-labelledby="footer-heading">
         <h2 id="footer-heading" className="sr-only">
           Footer
         </h2>
         <div className="mx-auto max-w-full py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="space-y-8 xl:col-span-1">
-              <img
-                className="h-10"
-                src="https://tailwindui.com/img/logos/mark.svg?color=gray&shade=300"
-                alt="Company name"
-              />
-              <p className="text-base text-gray-500">
-                Making the world a better place through constructing elegant hierarchies.
-              </p>
+                <img
+                            src={ logo_boomslag }
+                            height={140}
+                            width={120}
+                            className=""/>
               <div className="flex space-x-6">
                 {navigation.social.map((item) => (
                   <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
@@ -119,7 +115,7 @@ function Footer(){
             <div className="mt-12 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                  <h3 className="text-base font-medium text-gray-900">Solutions</h3>
+                  <h3 className="text-base font-medium text-gray-900">Visit Us</h3>
                   <ul role="list" className="mt-4 space-y-4">
                     {navigation.solutions.map((item) => (
                       <li key={item.name}>
@@ -131,7 +127,7 @@ function Footer(){
                   </ul>
                 </div>
                 <div className="mt-12 md:mt-0">
-                  <h3 className="text-base font-medium text-gray-900">Support</h3>
+                  <h3 className="text-base font-medium text-gray-900">Contact</h3>
                   <ul role="list" className="mt-4 space-y-4">
                     {navigation.support.map((item) => (
                       <li key={item.name}>
@@ -157,7 +153,7 @@ function Footer(){
                   </ul>
                 </div>
                 <div className="mt-12 md:mt-0">
-                  <h3 className="text-base font-medium text-gray-900">Legal</h3>
+                  <h3 className="text-base font-medium text-gray-900">Services</h3>
                   <ul role="list" className="mt-4 space-y-4">
                     {navigation.legal.map((item) => (
                       <li key={item.name}>
@@ -172,7 +168,7 @@ function Footer(){
             </div>
           </div>
           <div className="mt-12 border-t border-gray-200 pt-8">
-            <p className="text-base text-gray-400 xl:text-center">&copy; 2020 Your Company, Inc. All rights reserved.</p>
+            <p className="text-base text-gray-400 xl:text-center">&copy; 2020 Project Alan Mtz, Inc. All rights reserved.</p>
           </div>
         </div>
       </footer>
