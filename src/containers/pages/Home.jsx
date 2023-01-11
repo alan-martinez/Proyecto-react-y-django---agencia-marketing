@@ -10,6 +10,7 @@ import LogoCloud from "components/Home/LogoCloud";
 import BlogList from "components/Home/BlogList";
 import { useEffect } from "react";
 
+
 function Home()
 {
     useEffect(()=>{
