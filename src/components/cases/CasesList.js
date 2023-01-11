@@ -79,7 +79,7 @@ function CasesList(){
                 itemsToShow={3}
                 breakPoints={breakPoints}
                 pagination={false}
-                itemPadding={[0,2]}
+                itemPadding={[0,48]}
             >
             {/* <div className="mx-auto xl:mx-12 mt-12 grid max-w-lg gap-40 lg:max-w-none lg:grid-cols-2"> */}
                 {posts.map((post, index) => (
